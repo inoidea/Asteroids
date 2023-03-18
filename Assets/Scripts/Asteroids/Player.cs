@@ -10,7 +10,6 @@ namespace Asteroids
         [SerializeField] private float _force = 500;
         [SerializeField] private Rigidbody2D _bullet;
         [SerializeField] private Transform _barrel;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private Camera _camera;
         private Ship _ship;

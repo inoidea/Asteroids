@@ -67,6 +67,14 @@
     <Compile Include="Assets\Scripts\Asteroids\Damage.cs" />
     <Compile Include="Assets\Scripts\Asteroids\Ship.cs" />
     <Compile Include="Assets\Scripts\Asteroids\RotationShip.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\GameStarter.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\AsteroidFactory.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\IEnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\Asteroid.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\UFOFactory.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\UFO.cs" />
+    <Compile Include="Assets\Scripts\Asteroids\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
