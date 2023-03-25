@@ -8,7 +8,7 @@ namespace Asteroids
         [SerializeField] private float _acceleration;
         [SerializeField] private float _hp;
         [SerializeField] private float _force = 500;
-        [SerializeField] private Rigidbody2D _bullet;
+        [SerializeField] private GameObject _bullet;
         [SerializeField] private Transform _barrel;
 
         private Camera _camera;
@@ -47,11 +47,6 @@ namespace Asteroids
             {
                 Attack.Fire(_bullet, _barrel, _force);
             }
-        }
-
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            Damage.GetDamage(gameObject);
         }
     }
 }

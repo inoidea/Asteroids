@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
-  _bullet: {fileID: 5041683453324141520, guid: 9474885cb72f7cc479506a7347216e79, type: 3}
+  _bullet: {fileID: 5601096304544113574, guid: 9474885cb72f7cc479506a7347216e79, type: 3}
   _barrel: {fileID: 6053086036245686864}
   _force: 500
 --- !u!50 &-2407956610771402871

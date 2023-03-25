@@ -10,11 +10,12 @@ namespace Asteroids
     {
         private void OnCollisionEnter2D(Collision2D other)
         {
-            var unit = other.gameObject.GetComponent<IHealth>();
+            var unit = other.gameObject.GetComponent<Bullet>();
 
-            if (unit == null)
+            if (unit != null)
             {
-                Destroy(other.gameObject);
+                var bulletPool = new BulletPool(other.gameObject);
+                bulletPool.Return();
             }
         }
     }

@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Asteroids
 {
-    public abstract class Enemy : MonoBehaviour, IHealth
+    public abstract class Enemy : MonoBehaviour, IHealth, ICloneable
     {
         [SerializeField] private float _hp;
 
@@ -28,9 +29,8 @@ namespace Asteroids
             Health = hp;
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            Damage.GetDamage(gameObject);
+        public object Clone() { 
+            return MemberwiseClone();
         }
     }
 }

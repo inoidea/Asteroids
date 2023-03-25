@@ -6,7 +6,7 @@ namespace Asteroids
 {
     public sealed class UFO : Enemy
     {
-        [SerializeField] private Rigidbody2D _bullet;
+        [SerializeField] private GameObject _bullet;
         [SerializeField] private Transform _barrel;
         [SerializeField] private float _force = 500;
 
