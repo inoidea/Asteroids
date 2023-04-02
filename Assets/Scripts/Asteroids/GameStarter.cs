@@ -8,15 +8,20 @@ namespace Asteroids
         [SerializeField] private Transform[] _enemyPointList;
         public static Stack<GameObject> bulletPool = new Stack<GameObject>();
 
-        private void Start()
+        public void Start()
         {
+            // Астероид.
             Enemy.CreateAsteroidEnemy(100, GetEnemyPoint().position);
 
-            Enemy original = UFOFactory.CreateEnemy(100, GetEnemyPoint().position);
+            // Летающая тарелка.
+            UFO original = (UFO) UFOFactory.CreateEnemy(100, GetEnemyPoint().position);
+            original.SetAttackKind = new PowerfulAttack();
 
-            Enemy prototype = (Enemy)original.Clone();
-            prototype.DependencyInjectHealth(40);
-            Instantiate(prototype, GetEnemyPoint().position, Quaternion.identity);
+            //Enemy prototype = (Enemy)original.Clone();
+            //prototype.DependencyInjectHealth(40);
+            //Instantiate(prototype, GetEnemyPoint().position, Quaternion.identity);
+
+            var enemy = new UFO(new PowerfulAttack(), null);
         }
 
         public Transform GetEnemyPoint()

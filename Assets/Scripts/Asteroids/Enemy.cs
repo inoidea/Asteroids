@@ -9,12 +9,22 @@ namespace Asteroids
         [SerializeField] private float _hp;
 
         public static IEnemyFactory Factory;
+        private readonly IAttack _attack;
+        private readonly IMove _move;
 
         public float Health
         {
             get { return _hp; }
             set { _hp = value; }
         }
+
+        public Enemy(IAttack attack, IMove move)
+        {
+            _attack = attack;
+            _move = move;
+        }
+
+        public abstract void Attack();
 
         public static Asteroid CreateAsteroidEnemy(float hp, Vector3 enemyPoint)
         {

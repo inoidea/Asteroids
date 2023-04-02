@@ -45,7 +45,7 @@ namespace Asteroids
 
             if (Input.GetButtonDown("Fire1"))
             {
-                Attack.Fire(_bullet, _barrel, _force);
+                SimpleAttack.Attack(_bullet, _barrel, _force);
             }
         }
     }
